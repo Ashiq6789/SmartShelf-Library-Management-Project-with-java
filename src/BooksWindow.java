@@ -199,10 +199,11 @@ public class BooksWindow {
     }
 
     private static void refresh(){
-        table.getItems().clear();
+       
         searchOption.setValue("Search by Title");
         cat.setValue("All");
         searchBox.clear();
+        table.getItems().clear();
         try {
             table.getItems().addAll(conn.getAllBooks("All"));
         } catch (SQLException e) {
